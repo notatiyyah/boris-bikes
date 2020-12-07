@@ -1,3 +1,3 @@
 This is a project emulating the set up of the Boris Bike network.
 
-![Alt text](relative/path/to/Boris Bike User story.png?raw=true "Title")
+!Boris Bikes User Story](https://github.com/lena0910/boris-bikes/blob/main/Boris%20Bike%20User%20story.png)
