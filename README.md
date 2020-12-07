@@ -1,6 +1,19 @@
-This is a project emulating the set up of the Boris Bike network.
+# Boris Bikes Challenges
 
-<<<<<<< HEAD
-!Boris Bikes User Story](https://github.com/lena0910/boris-bikes/blob/main/Boris%20Bike%20User%20story.png)
+This is a project based on London's [Boris Bikes](https://tfl.gov.uk/modes/cycling/santander-cycles) (i.e. 'Santander Cycles')
 
-]![Boris Bikes User Story](./exercises/Boris-Bikes-User-Story.png)
+## How to use
+
+```shell
+rspec
+```
+
+## Technical Details
+
+The program uses two classes: DockingStation & Bike
+
+![Boris Bikes UML](./exercises/Boris-Bikes-UML.png)
+
+## User Story
+
+![Boris Bikes User Story](./exercises/Boris-Bikes-User-Story.png)
