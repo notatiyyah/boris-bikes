@@ -4,12 +4,12 @@ describe DockingStation do
 
   it "contains release_bike method" do
     docking_station = DockingStation.new
-    expect(docking_station).to respond_to(:release_a_bike)
+    expect(docking_station).to respond_to(:release_bike)
   end
   
   it "can release a bike" do
     docking_station = DockingStation.new
-    bike = docking_station.release_a_bike
+    bike = docking_station.release_bike
     expect(bike).to respond_to(:working?)
   end
 
