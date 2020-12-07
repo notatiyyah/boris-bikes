@@ -1,11 +1,8 @@
 require "boris_bikes.rb"
 
 describe DockingStation do
- #it "is where the bike is stored" do
-    
-  # end
 
-  it "understand what release a bike means" do
+  it "contains release_bike method" do
     docking_station = DockingStation.new
     expect(docking_station).to respond_to(:release_a_bike)
   end
@@ -13,10 +10,10 @@ describe DockingStation do
   it "can release a bike" do
     docking_station = DockingStation.new
     bike = docking_station.release_a_bike
-    expect(bike.working?) == true
+    expect(bike).to respond_to(:working?)
   end
 
-  it "knows how to dock a bike" do
+  it "contains dock_bike method" do
     docking_station = DockingStation.new
     bike = Bike.new
     expect(docking_station).to respond_to(:dock_bike)
@@ -33,7 +30,7 @@ describe DockingStation do
 end
 
 describe Bike do
-  it "responds whether or not bike is working" do
+  it "returns working? status" do
     bike = Bike.new
     expect(bike).to respond_to(:working?)
   end
