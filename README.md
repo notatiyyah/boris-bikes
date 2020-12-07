@@ -18,4 +18,5 @@ DockingStation can:
 - Release a bike, where it returns a Bike object. (In the future this will be a Bike from the docked_bikes array)
 - Dock a bike, where it adds a Bike obeject to the docked_bikes array
 
-Bike has one method - working? Which returns its' working status (true/false)
+Bike has one method:
+- working?, which returns its' working status (true/false)
