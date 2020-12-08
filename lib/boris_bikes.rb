@@ -24,10 +24,11 @@ class DockingStation
     end
   end
 
-  def dock_bike(bike)
+  def dock_bike(bike, working=true)
     if full?
       raise "There is no space in this docking station"
     else
+      bike.set_working_status(working) 
       @docked_bikes.push(bike)
     end
   end
@@ -40,9 +41,16 @@ class DockingStation
 end
 
 class Bike 
-  
+  def initialize()
+    @working = true
+  end
+
   def working?
-    return true
+    @working
+  end
+
+  def set_working_status(status)
+    @working = status
   end
 
 end

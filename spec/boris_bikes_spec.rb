@@ -55,12 +55,33 @@ describe DockingStation do
     expect(docking_station.docked_bikes.length).to eq 30
   end
 
+  it "when docking the bike, lets the user report that it is not working" do
+    docking_station = DockingStation.new
+    bike = Bike.new
+    docking_station.dock_bike(bike, false)
+    docked_bike = docking_station.docked_bikes.pop
+    expect(docked_bike.working?).to eq false
+  end
+
 end
 
 describe Bike do
+
   it "returns working? status" do
     bike = Bike.new
     expect(bike).to respond_to(:working?)
   end
+
+  it "has a function to update 'working' status" do
+    bike = Bike.new
+    expect(bike).to respond_to(:set_working_status)
+  end
+
+  it "can update 'working' status" do
+    bike = Bike.new
+    bike.set_working_status(false)
+    expect(bike.working?).to eq false
+  end
+
 end
 
