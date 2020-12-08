@@ -16,16 +16,15 @@ class DockingStation
   end
 
   def release_bike
-    bike = @docked_bikes.pop
-    if bike.nil?
+    if @docked_bikes.empty?
       raise "There are no bikes to release"
     else
-      return bike
+      @docked_bikes.pop
     end
   end
 
   def full?
-    return if @docked_bikes.length >= @capacity
+    return @docked_bikes.length >= @capacity
   end
 
   def dock_bike(bike)
