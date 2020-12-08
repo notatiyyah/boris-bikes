@@ -2,10 +2,17 @@ class DockingStation
 
   attr_reader :docked_bikes
 
-  def initialize(num_of_bikes=0)
+  def initialize
     @docked_bikes = []
-    @capacity = 1
-    num_of_bikes.times {@docked_bikes << Bike.new}
+    @capacity = 20
+  end
+
+  def set_num_of_bikes(num)
+    if num > @capacity
+      num = @capacity
+      puts "You tried to enter more bikes than can fit, #{@capacity} bikes have been added"
+    end
+    num.times {@docked_bikes << Bike.new}
   end
 
   def release_bike
