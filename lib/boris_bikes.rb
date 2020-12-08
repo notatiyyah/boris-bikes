@@ -23,10 +23,6 @@ class DockingStation
     end
   end
 
-  def full?
-    return @docked_bikes.length >= @capacity
-  end
-
   def dock_bike(bike)
     if full?
       raise "There is no space in this docking station"
@@ -34,7 +30,12 @@ class DockingStation
       @docked_bikes.push(bike)
     end
   end
-
+  
+  private
+  def full?
+    return @docked_bikes.length >= @capacity
+  end
+  
 end
 
 class Bike 

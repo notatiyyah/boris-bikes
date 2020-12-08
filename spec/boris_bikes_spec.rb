@@ -36,7 +36,7 @@ describe DockingStation do
   it "raises an error if asked to dock a bike where there is no space" do
     docking_station = DockingStation.new
     docking_station.set_num_of_bikes(20)
-    # FIlls docking station to max capacity
+    # Fills docking station to max capacity
     bike = Bike.new
     expect { docking_station.dock_bike(bike) }.to raise_error("There is no space in this docking station")
   end
