@@ -41,6 +41,13 @@ describe DockingStation do
     expect { docking_station.dock_bike(bike) }.to raise_error("There is no space in this docking station")
   end
 
+  it "has a default capacity of 20" do
+    docking_station = DockingStation.new
+    docking_station.set_num_of_bikes(docking_station.capacity)
+    # Fill docking station to max capacity
+    expect(docking_station.docked_bikes.length).to eq 20
+  end
+
   it "lets the user set the capacity to 30" do
     docking_station = DockingStation.new(30)
     docking_station.set_num_of_bikes(docking_station.capacity)
