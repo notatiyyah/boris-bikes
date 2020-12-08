@@ -1,10 +1,11 @@
 class DockingStation
 
   attr_reader :docked_bikes
+  attr_reader :capacity
 
-  def initialize
+  def initialize(new_capacity=20)
     @docked_bikes = []
-    @capacity = 20
+    @capacity = new_capacity
   end
 
   def set_num_of_bikes(num)
